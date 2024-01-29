@@ -17,5 +17,7 @@ public class w1q6_MyNumber {
 
         double numRound = Math.round(num);
         System.out.println(numRound);
+
+        double numCeil;
     }
 }
