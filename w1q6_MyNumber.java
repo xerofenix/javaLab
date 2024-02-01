@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author CSD
+ * @author fenix
  */
 public class w1q6_MyNumber {
 
@@ -18,6 +18,10 @@ public class w1q6_MyNumber {
         double numRound = Math.round(num);
         System.out.println(numRound);
 
-        double numCeil;
+        double numCeil = Math.ceil(num);
+        System.out.println(numCeil);
+
+        double numFloor = Math.floor(num);
+        System.out.println(numFloor);
     }
 }
