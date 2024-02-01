@@ -5,7 +5,7 @@
 
 /**
  *
- * @author CSD
+ * @author fenix
  */
 public class w1q3_Sum2Nos {
  public static void main(String[] args){
