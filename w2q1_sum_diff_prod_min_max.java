@@ -23,12 +23,13 @@ public class w2q1_sum_diff_prod_min_max {
         System.out.println("Quotient of two numbers: " + (num1 / num2));
 
         if (num1 > num2) {
-            System.out.println(num1 + "is maximun");
-            System.out.println(num2 + "is minimum");
+            System.out.println(num1 + " is maximun");
+            System.out.println(num2 + " is minimum");
         } else {
-            System.out.println(num2 + "is maximum");
-            System.out.println(num1 + "is minimum");
+            System.out.println(num2 + " is maximum");
+            System.out.println(num1 + " is minimum");
         }
 
+        sc.close();
     }
 }

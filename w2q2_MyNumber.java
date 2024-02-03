@@ -18,12 +18,13 @@ public class w2q2_MyNumber {
         double num = sc.nextDouble();
 
         double numRound = Math.round(num);
-        System.out.println(numRound);
+        System.out.println("Rounded value "+numRound);
 
         double numCeil = Math.ceil(num);
-        System.out.println(numCeil);
+        System.out.println("Ciel value "+numCeil);
 
         double numFloor = Math.floor(num);
-        System.out.println(numFloor);
+        System.out.println("Floor value "+numFloor);
+        sc.close();
     }
 }
