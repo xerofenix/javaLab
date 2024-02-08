@@ -13,7 +13,9 @@ public class w4q3_sum_prod{
 
         System.out.println("The sum of all the numbers is: "+(num1+num2+num3+num4));
         System.out.print("The product of all the numbers is: "+(num1*num2*num3*num4));
+
     
         sc.close();
+
     }
 }
