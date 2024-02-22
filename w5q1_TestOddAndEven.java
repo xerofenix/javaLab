@@ -7,13 +7,16 @@ public class w5q1_TestOddAndEven {
         OddAndEven oe = new OddAndEven();
 
         System.out.println("Enter number to test ODD and Even, Q to quit");
+        String str = "";
 
-        // char num = 's';
-        String c = sc.next();
-        while (c != "q" || c != "Q") {
-            c = sc.next();
-            int num = (int) c;
-            oe.addNumber(num);
+        while (true) {
+            str = sc.next();
+            if (str.equalsIgnoreCase("q")) {
+                break;
+            } else {
+                int num = Integer.parseInt(str);
+                oe.addNumber(num);
+            }
         }
         oe.tostring();// output
 
