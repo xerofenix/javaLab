@@ -14,10 +14,10 @@ public class w2q3_Math_methods {
         System.out.println("return the arc sine value " + Math.asin(num));
         System.out.println("Arc tan value " + Math.atan(num2));
         System.out.println("Cube root of first value " + Math.cbrt(num));
-        System.out.println("Clampt the value" + Math.clamp(num2, 412, 786));
+//        System.out.println("Clampt the value" + Math.clamp(num2, 412, 786));
         System.out.println("Cosine value " + Math.cos(num));
         System.out.println("Cosine hyperbolic value value " + Math.cosh(num2));
-        System.out.println("Fused Multiply add " + Math.fma(num2, num, num2));
+//        System.out.println("Fused Multiply add " + Math.fma(num2, num, num2));
         System.out.println("Log value (base 'e') " + Math.log(num));
         System.out.println("log value base 10 " + Math.log10(num));
         System.out.println("maximum of both " + Math.max(num, num2));
