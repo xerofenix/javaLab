@@ -1,26 +1,37 @@
 
-import java.util.Scanner;
 import java.util.*;
 
 public class w5q3_Sentence_word {
 
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter a sentence or string");
-        String str = sc.next();
-        sc.next();
-        String delim = " ";
+        System.out.print("Enter text: ");
+        String text = sc.nextLine();
 
-        // making an object of StringTockenizer class
-        StringTokenizer tokenizer = new StringTokenizer(str, delim);
+        StringTokenizer tokenizer = new StringTokenizer(text, " ");
 
-        int cntWord = 0;
-        while (tokenizer.hasMoreTokens()) {
-            System.out.println(tokenizer.nextToken());
-            cntWord++;
+        int wordCount = tokenizer.countTokens();
+        int sentenceCount = 0;
+        int eCount = 0;
+        int zCount = 0;
+
+        for (char ch : text.toLowerCase().toCharArray()) {
+            if (ch == 'e') {
+                eCount++;
+            } else if (ch == 'z') {
+                zCount++;
+            }
+            if (ch == '.') {
+                sentenceCount++;
+            }
         }
-        System.out.println(cntWord);
-        sc.close();
+
+        System.out.println("Number of words: " + wordCount);
+        System.out.println("Number of sentences: " + sentenceCount);
+        System.out.println("Number of 'e' characters: " + eCount);
+        System.out.println("Number of 'z' characters: " + zCount);
     }
+
 }
