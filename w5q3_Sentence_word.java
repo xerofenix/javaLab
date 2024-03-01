@@ -32,6 +32,10 @@ public class w5q3_Sentence_word {
         System.out.println("Number of sentences: " + sentenceCount);
         System.out.println("Number of 'e' characters: " + eCount);
         System.out.println("Number of 'z' characters: " + zCount);
+        
+        
+        
+        sc.close();
     }
 
 }
