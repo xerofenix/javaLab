@@ -1,5 +1,34 @@
-public class w6q2_Student_Quizzes {
+import java.util.Scanner;
 
+public class w6q2_Student_Quizzes {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter nam of the student: ");
+        String nm = sc.next();
+
+        // making object s here
+        Student s = new Student(nm);
+
+        // taking score of the quizes
+        System.out.print("Enter the score in quize 1: ");
+        double scr1 = sc.nextDouble();
+        s.addQuiz(scr1);
+        System.out.print("Enter the score in quize 2: ");
+        double scr2 = sc.nextDouble();
+        s.addQuiz(scr2);
+        System.out.print("Enter the score in quize 3: ");
+        double scr3 = sc.nextDouble();
+        s.addQuiz(scr3);
+
+        // double t_score = s.getTotalScore();
+        // System.out.println("The total score of the student: " + t_score);
+
+        // printing detials usinf method
+        s.printStudent();
+
+        sc.close();
+    }
 }
 
 /**
@@ -38,12 +67,14 @@ class Student {
     }
 
     void addQuiz(double score) {
+        this.totalScore = this.totalScore + score;
+        this.numberOfQuizzes++;
     }
 
     void printStudent() {
         System.out.println("Name: " + this.name);
         double avg_scr = getAverage();
-        System.out.println("Aveergae score: " + avg_scr);
+        System.out.println("Average score: " + avg_scr);
     }
 
 }
