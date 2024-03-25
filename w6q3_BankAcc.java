@@ -35,7 +35,7 @@ public class w6q3_BankAcc {
                     ba.deposit(dAmnt);
                     break;
                 case 2:
-                    System.out.print("Enter the amount to deposit: ");
+                    System.out.print("Enter the amount to withdraw: ");
                     double wAmnt = sc.nextDouble();
                     ba.withdraw(wAmnt);
                     break;
