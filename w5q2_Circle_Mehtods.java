@@ -75,7 +75,7 @@ class Circle {
 
     double checkPoint(double x, double y) {
         double dist = Math.sqrt(Math.pow((this.x - x), 2) + Math.pow((this.y - y), 2));
-        System.out.println(dist);
+        // System.out.println(dist);
 
         return dist;
     }
