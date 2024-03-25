@@ -4,8 +4,8 @@ public class w6q2_Student_Quizzes {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter nam of the student: ");
-        String nm = sc.next();
+        System.out.print("Enter name of the student: ");
+        String nm = sc.nextLine();
 
         // making object s here
         Student s = new Student(nm);
