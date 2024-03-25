@@ -23,7 +23,7 @@ public class w5q3_Sentence_word {
             } else if (ch == 'z') {
                 zCount++;
             }
-            if (ch == '.') {
+            if (ch == '.'|| ch=='?') {
                 sentenceCount++;
             }
         }
