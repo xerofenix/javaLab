@@ -7,29 +7,43 @@ public class w8q1_toStringPerson {
         System.out.println("Enter your name: ");
         String nm = sc.nextLine();
         System.out.println("Enter year of birth: ");
-        int yob = sc.nextInt();
+        String yob = sc.nextLine();
 
+        // passing input in constructor
         Person p = new Person(nm, yob);
-        System.out.println(p.name);
+
+        System.out.println(p);
+
+        // taking major input for student
+        System.out.println("Enter your major");
+        String mj = sc.nextLine();
+        Student st = new Student(nm, yob, mj);
+        System.out.println(st);
+        // taking input for salary
+        System.out.println("Enter your salary");
+        double sl = sc.nextDouble();
+        Instructor ins = new Instructor(nm, yob, sl);
+        System.out.println(ins);
         sc.close();
     }
 }
 
 class Person {
     String name;
-    int yrBirth;
+    String yrBirth;
 
     Person() {
     }
 
     // constructor with argument
-    Person(String name, int yrBirth) {
+    Person(String name, String yrBirth) {
         this.name = name;
         this.yrBirth = yrBirth;
     }
 
+    @Override
     public String toString() {
-        return "Name = " + name + " Year of Birth " + yrBirth;
+        return "Name = " + name + ", Year of Birth " + yrBirth;
     }
 }
 
@@ -37,7 +51,7 @@ class Student extends Person {
     String major;
 
     // constructor
-    Student(String name, int yrBirth, String major) {
+    Student(String name, String yrBirth, String major) {
 
         // calling super class onstrucntor with argument
         super(name, yrBirth);
@@ -45,7 +59,7 @@ class Student extends Person {
     }
 
     public String toString() {
-        return "Name = " + name + " Year of Birth " + yrBirth + " Major is " + major;
+        return "Name = " + name + ", Year of Birth " + yrBirth + ", Major is " + major;
     }
 
 }
@@ -54,7 +68,7 @@ class Instructor extends Person {
     double salary;
 
     // constructor
-    Instructor(String name, int yrBirth, double salary) {
+    Instructor(String name, String yrBirth, double salary) {
 
         // calling super class onstrucntor with argument
         super(name, yrBirth);
@@ -62,6 +76,6 @@ class Instructor extends Person {
     }
 
     public String toString() {
-        return "Name = " + name + " Year of Birth " + yrBirth + " Salary is " + salary;
+        return "Name = " + name + ", Year of Birth " + yrBirth + ",Salary is " + salary;
     }
 }
