@@ -13,10 +13,17 @@ public class w8q2_Employee {
         System.out.print("Enter the salary of the Employee: ");
         double slr = sc.nextDouble();
 
-        Employee emp= new Employee(id, nm, dpt, slr);
+        System.out.println();
+        Employee emp = new Employee(id, nm, dpt, slr);
 
         emp.display();
+        System.out.println();
+        System.out.println("Enter the bonus of the Manager");
+        double bns = sc.nextDouble();
 
+        Manager mng = new Manager(id, nm, dpt, slr, bns);
+
+        mng.display();
 
     }
 }
@@ -58,9 +65,8 @@ class Manager extends Employee {
         this.bonus = bonus;
     }
 
-void display ()
-{
-    System.out.println("The bonus of the Manager is "+this.bonus);
-}
+    void display() {
+        System.out.println("The bonus of the Manager is " + this.bonus);
+    }
 
 }
