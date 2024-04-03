@@ -23,7 +23,7 @@ public class w8q2_Employee {
         Manager mng = new Manager(id, nm, dpt, slr, bns);
 
         mng.display();
-
+        sc.close();
     }
 }
 
@@ -43,7 +43,9 @@ class Employee {
     Employee() {
 
     }
-//bcz the salary is private we cannot use it in the Manager class to add into the bonus
+
+    // bcz the salary is private we cannot use it in the Manager class to add into
+    // the bonus
     double accepts() {
         return this.salary;
     }
@@ -64,11 +66,10 @@ class Manager extends Employee {
         this.bonus = bonus;
     }
 
-    void display()
-    {
+    void display() {
         super.display();
-        System.out.println("The bonus of the manager is "+this.bonus);
-        System.out.println("The total salary of the manager is "+(super.accepts()+this.bonus));
+        System.out.println("The bonus of the manager is " + this.bonus);
+        System.out.println("The total salary of the manager is " + (super.accepts() + this.bonus));
     }
 
 }
