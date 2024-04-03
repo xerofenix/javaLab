@@ -3,10 +3,12 @@ import java.util.Scanner;
 public class w8q2_Employee {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
         System.out.print("Enter the ID of the employee: ");
-        int id = sc.nextInt();
+        String id = sc.nextLine();
+
         System.out.print("Enter the name of the employee: ");
-        sc.nextLine();
+
         String nm = sc.nextLine();
         System.out.print("Enter the department of thr Employee: ");
         String dpt = sc.nextLine();
@@ -14,12 +16,9 @@ public class w8q2_Employee {
         double slr = sc.nextDouble();
 
         System.out.println();
-        Employee emp = new Employee(id, nm, dpt, slr);
-
-        emp.display();
-        System.out.println();
-        System.out.println("Enter the bonus of the Manager");
+        System.out.print("Enter the bonus of the Manager: ");
         double bns = sc.nextDouble();
+        System.out.println();
 
         Manager mng = new Manager(id, nm, dpt, slr, bns);
 
@@ -29,12 +28,12 @@ public class w8q2_Employee {
 }
 
 class Employee {
-    private int id;
+    private String id;
     private String name;
     private String department;
     private double salary;
 
-    Employee(int id, String name, String department, double salary) {
+    Employee(String id, String name, String department, double salary) {
         this.id = id;
         this.name = name;
         this.department = department;
@@ -44,10 +43,10 @@ class Employee {
     Employee() {
 
     }
-
-    // double accepts(double sal){
-
-    // }
+//bcz the salary is private we cannot use it in the Manager class to add into the bonus
+    double accepts() {
+        return this.salary;
+    }
 
     void display() {
         System.out.println("The name of the employee is " + this.name);
@@ -60,13 +59,16 @@ class Employee {
 class Manager extends Employee {
     private double bonus;
 
-    Manager(int id, String name, String department, double salary, double bonus) {
+    Manager(String id, String name, String department, double salary, double bonus) {
         super(id, name, department, salary);
         this.bonus = bonus;
     }
 
-    void display() {
-        System.out.println("The bonus of the Manager is " + this.bonus);
+    void display()
+    {
+        super.display();
+        System.out.println("The bonus of the manager is "+this.bonus);
+        System.out.println("The total salary of the manager is "+(super.accepts()+this.bonus));
     }
 
 }
