@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 import java.util.*;
 
 public class w8q3_Vehicle {
