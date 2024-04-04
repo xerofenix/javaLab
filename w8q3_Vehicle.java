@@ -1,11 +1,12 @@
 import java.util.Scanner;
+import java.util.*;
 
 public class w8q3_Vehicle {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
 
         String inp;
-        int flag = 0, check = 0;
+        int check = 0;
         while (true) {
             System.out.println("Enter 1 for Light Motor Vehicle, 2 for Heavy Motor Vehicle, Q/q for exit");
             inp = sc.next();
@@ -13,12 +14,19 @@ public class w8q3_Vehicle {
             if (inp.equalsIgnoreCase("Q")) {
                 break;
             }
+
+            // try bcz user can input string/float which can't be parsed to int
             try {
                 check = Integer.parseInt(inp);
 
+                // handling if user provide numbers other than 1 or 2
+                if (check > 2 || check < 1) {
+                    System.out.println("Only 1 or 2 is acceptable\n");
+                }
+
             } catch (Exception e) {
                 // TODO: handle exception
-                System.out.println("Invalid input");
+                System.out.println("Invalid input\n");
             }
 
             switch (check) {
@@ -37,18 +45,22 @@ public class w8q3_Vehicle {
                     String cmp_name_hmv = sc.nextLine();
                     System.out.print("Enter the price of the vehicle: ");
                     double price_hmv = sc.nextDouble();
-                    System.out.print("Enter the mileage of the vehicle: ");
+                    System.out.print("Enter the capacity (in ton) of the vehicle: ");
                     double capc = sc.nextDouble();
-                    LightMotorVehicle hmv = new LightMotorVehicle(cmp_name_hmv, price_hmv, capc);
+                    HeavyMotorVehicle hmv = new HeavyMotorVehicle(cmp_name_hmv, price_hmv, capc);
                     hmv.toShow();
                     break;
 
-                default:
-                    break;
+                // no need of default bcz this is handeled by try-catch above
+                /*
+                 * default:
+                 * System.out.println("Invalid Input!");
+                 * break;
+                 */
             }
 
         }
-        System.out.println("Quitted");
+        System.out.println("Quitted! See you soon");
         sc.close();
     }
 }
@@ -72,9 +84,9 @@ class LightMotorVehicle extends Vehicle {
     }
 
     void toShow() {
-        System.out.print("The company of the vehicle is " + this.company);
-        System.out.print("The price of the vehicle is " + this.price);
-        System.out.print("The mileage of the vehicle is " + this.mileage);
+        System.out.println("\nThe price of the vehicle is " + this.price);
+        System.out.println("The company of the vehicle is " + this.company);
+        System.out.println("The mileage of the vehicle is " + this.mileage + "\n");
     }
 }
 
@@ -87,8 +99,8 @@ class HeavyMotorVehicle extends Vehicle {
     }
 
     void toShow() {
-        System.out.print("The company of the vehicle is " + this.company);
-        System.out.print("The price of the vehicle is " + this.price);
-        System.out.print("The capacity of the vehicle is " + this.capacityInTons + " tons");
+        System.out.println("\nThe company of the vehicle is " + this.company);
+        System.out.println("The price of the vehicle is " + this.price);
+        System.out.println("The capacity of the vehicle is " + this.capacityInTons + " tons\n");
     }
 }
