@@ -9,7 +9,7 @@
  */
 public class w1q2_corresAddress {
  public static void main(String[] args){
-        System.out.println("Room X, Morrison Court, Aftab Hall, Aligarh Muslim University, Aligarh");
+        System.out.println("Room X MOF Hostel, SZ Hall Aligarh Muslim University Aligarh");
 
     }
 }
