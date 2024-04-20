@@ -37,7 +37,10 @@ public class w9q1_BankAccAdvance {
                         sa.displayBalance();
                         break;
                     case 4:
-                        sa.compIntrst();
+                        System.out.println("Enter for how many years you want compound interest");
+                        int yr = sc.nextInt();
+                        sa.compIntrst(yr);
+                        break;
                     default:
                         System.out.println("Invalid Operation");
                         break;
@@ -143,14 +146,10 @@ class savAcc extends Account {
         System.out.println("Your account balance is: " + this.balance);
     }
 
-    void compIntrst() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter for how many years you want compund interest:");
-
-        int yr = sc.nextInt();
+    void compIntrst(int yr) {
 
         double ci = this.balance * (Math.pow((1 + (2.9 / 100)), yr) - 1);
         this.balance += ci;
-        sc.close();
+
     }
 }
