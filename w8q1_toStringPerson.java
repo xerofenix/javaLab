@@ -17,6 +17,7 @@ public class w8q1_toStringPerson {
         // taking major input for student
         System.out.println("Enter your major");
         String mj = sc.nextLine();
+
         Student st = new Student(nm, yob, mj);
         System.out.println(st);
         // taking input for salary
@@ -32,8 +33,7 @@ class Person {
     String name;
     String yrBirth;
 
-    Person() {
-    }
+    
 
     // constructor with argument
     Person(String name, String yrBirth) {

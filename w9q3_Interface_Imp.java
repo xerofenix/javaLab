@@ -9,34 +9,40 @@ interface Car {
 
 }
 
-class Baleno implements Car{
+class Baleno implements Car {
 
     @Override
     public void company() {
-        // TODO Auto-generated method stub
+
         System.out.println("The company of the car is Maruti");
     }
 
     @Override
     public void engineCapacity() {
-        // TODO Auto-generated method stub
+
         System.out.println("The capacity of the engine is 1197cc");
     }
 
     @Override
     public void modelYear() {
-        // TODO Auto-generated method stub
-        
+
+        System.out.println("The model year of the car is 2024");
     }
 
     @Override
     public void price() {
-        // TODO Auto-generated method stub
-        
+        System.out.println("The price of the car is 16 Lac");
+
     }
-    
+
 }
 
 public class w9q3_Interface_Imp {
-
+    public static void main(String[] args) {
+        Baleno bl = new Baleno();
+        bl.company();
+        bl.engineCapacity();
+        bl.modelYear();
+        bl.price();
+    }
 }
